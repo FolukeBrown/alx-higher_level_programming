@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-# SQL - Introduction
-
-In this project, we began working on relational databases. I started practising introductory SQL data definitions and data manipulation language, making subqueries, and using functions.
-=======
-# 0x0D. SQL - INTRODUCTION
+# 0x0E. SQL - MORE QUERIES
 Structured Query Language is used for storing and processing data from a relational database.
-This project is an introduction to **SQL** and the database used is **MySQL**
 
 ## GETTING STARTED
 ### To start, install MySQL.
@@ -45,4 +39,23 @@ $ cat my_script.sql
 SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
 $
 ```
->>>>>>> 074d076ed81eb1145fab1c68cd583ac96c63d776
+
+### How to import SQL dump
+```
+$ echo "CREATE DATABASE hbtn_0d_tvshows;" | mysql -uroot -p
+Enter password: 
+$ curl "https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" -s | mysql -uroot -p hbtn_0d_tvshows
+Enter password: 
+$ echo "SELECT * FROM tv_genres" | mysql -uroot -p hbtn_0d_tvshows
+Enter password: 
+id  name
+1   Drama
+2   Mystery
+3   Adventure
+4   Fantasy
+5   Comedy
+6   Crime
+7   Suspense
+8   Thriller
+$
+```
