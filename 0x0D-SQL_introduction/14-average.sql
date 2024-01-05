@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+-- Computes the average score of all records in the table second_table in my MySQL server.
+SELECT AVG(`score`) AS `average`
+FROM `second_table`;
+=======
 -- A script that computes the score average of all records in the table second_table of the database hbtn_0c_0 in your MySQL server.
 -- The result column name should be average
 -- The database name will be passed as an argument of the mysql command
@@ -5,3 +10,4 @@
 -- COMPUATIONAL FUNCTIONS
 SELECT AVG(score) as average
 FROM second_table;
+>>>>>>> 074d076ed81eb1145fab1c68cd583ac96c63d776

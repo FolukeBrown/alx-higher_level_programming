@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+# SQL - Introduction
+
+In this project, we began working on relational databases. I started practising introductory SQL data definitions and data manipulation language, making subqueries, and using functions.
+=======
 # 0x0D. SQL - INTRODUCTION
 Structured Query Language is used for storing and processing data from a relational database.
 This project is an introduction to **SQL** and the database used is **MySQL**
@@ -40,3 +45,4 @@ $ cat my_script.sql
 SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
 $
 ```
+>>>>>>> 074d076ed81eb1145fab1c68cd583ac96c63d776
