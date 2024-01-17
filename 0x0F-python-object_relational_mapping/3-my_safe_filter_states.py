@@ -1,17 +1,38 @@
 #!/usr/bin/python3
-"""  lists all states from the database hbtn_0e_0_usa """
-import MySQLdb
-import sys
-
+"""
+Module that connects a python script to a database
+"""
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
-    cur = db.cursor()
-    match = sys.argv[4]
-    cur.execute("SELECT * FROM states WHERE name LIKE %s", (match, ))
-    rows = cur.fetchall()
-    for row in rows:
+
+    import MySQLdb
+    from sys import argv
+
+    # Connect database using command-line arguments
+    my_db = MySQLdb.connect(
+        host='localhost',
+        user=argv[1],
+        password=argv[2],
+        db=argv[3],
+        port=3306
+        )
+
+    # Create cursor obj to interact with database
+    my_cursor = my_db.cursor()
+
+    # Execute a SELECT query to fetch data
+    my_cursor.execute(
+        "SELECT * FROM states  WHERE name=%s ORDER BY id", (argv[4], ))
+
+    # fetch all the data returned by the query
+    my_data = my_cursor.fetchall()
+
+    # Iterate through the fetched data and print each row
+    for row in my_data:
         print(row)
-    cur.close()
-    db.close()
+
+    # Close all cursors
+    my_cursor.close()
+
+    # Close all databases
+    my_db.close()

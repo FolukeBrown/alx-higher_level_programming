@@ -1,13 +1,10 @@
--- A script that lists all shows from hbtn_0d_tvshows_rate by their rating.
+-- lists all shows by rating
 -- Each record should display: tv_shows.title - rating sum
 -- Results must be sorted in descending order by the rating
 -- You can use only one SELECT statement
--- The database name will be passed as an argument of the mysql command
 
-SELECT tv_shows.title,
-SUM(tv_show_ratings.rate) AS rating
-FROM tv_shows
-JOIN tv_show_ratings
-ON tv_shows.id = tv_show_ratings.show_id
-GROUP BY tv_shows.title
-ORDER BY rating DESC;
+SELECT tv_shows.title, tv_show_genres.genre_id
+FROM tv_shows LEFT JOIN tv_show_genres
+ON tv_shows.id = tv_show_genres.show_id
+WHERE tv_show_genres.genre_id IS NULL
+ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;

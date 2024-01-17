@@ -1,16 +1,24 @@
-#!/usr/bin/python3 
- """This defines a Rectangle subclass Square.""" 
- Rectangle = __import__('9-rectangle').Rectangle 
-  
-  
- class Square(Rectangle): 
-     """This represents a square.""" 
-  
-     def __init__(self, size): 
-         """This initialize a new square. 
-         Args: 
-             size (int): This is the size of the new square. 
-         """ 
-         self.integer_validator("size", size) 
-         super().__init__(size, size) 
-         self.__size = size
+#!/usr/bin/python3
+
+"""importing Rectangle"""
+
+Rectangle = __import__('9-rectangle').Rectangle
+
+"""Write a class square that inherites from rectangle"""
+
+
+class Square(Rectangle):
+    """A subclass of Rectangle"""
+    def __init__(self, size):
+        """initialize private attribute size and validate it"""
+        self.integer_validator("size", size)
+        super().__init__(size, size)
+        self.__size = size
+
+    def area(self):
+        """returns area of a square"""
+        return self.__size ** 2
+
+    def __str__(self):
+        """Return and print the square description"""
+        return str("[Square] {:d}/{:d}".format(self.__size, self.__size))

@@ -1,20 +1,28 @@
 #!/usr/bin/python3
-"""lists the 10 most recent commits on a given GitHub repository.
-"""
+"""using the GitHub API to list commits"""
+
 import sys
 import requests
 
 
 if __name__ == "__main__":
-    url = "https://api.github.com/repos/{}/{}/commits".format(
-        sys.argv[2], sys.argv[1])
+    # get the repo name and owner from the command line
+    repository_name = sys.argv[1]
+    owner_name = sys.argv[2]
 
-    r = requests.get(url)
-    commits = r.json()
-    try:
-        for i in range(10):
-            print("{}: {}".format(
-                commits[i].get("sha"),
-                commits[i].get("commit").get("author").get("name")))
-    except IndexError:
-        pass
+    # GitHub API URL
+    url = 'https://api.github.com/repos/{}/{}/commits'.format(
+        owner_name, repository_name)
+
+    # limit no of pages
+    params = {'per_page': 10}
+
+    # send a GET request to the GitHub API
+    response = requests.get(url, params=params)
+
+    # parse the JSON response
+    commits = response.json()
+    for commit in commits:
+        sha = commit['sha']
+        author_name = commit['commit']['author']['name']
+        print(f"{sha}: {author_name}")

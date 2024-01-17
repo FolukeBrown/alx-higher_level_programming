@@ -1,12 +1,15 @@
 #!/usr/bin/python3
-"""Displays the X-Request-Id header variable of a request to a given URL
-"""
-import sys
+"""Using request module to send a request to the URL"""
+
+
 import requests
+import sys
 
 
 if __name__ == "__main__":
+    # get the URL from the command line argument
     url = sys.argv[1]
 
-    r = requests.get(url)
-    print(r.headers.get("X-Request-Id"))
+    # Make a GET request to the URL
+    response = requests.get(url)
+    print(response.headers.get('X-Request-Id'))

@@ -1,21 +1,7 @@
-<<<<<<< HEAD
--- Lists the number of records with the same score in the table second_table in my MySQL server.
--- Records are ordered by descending count.
-SELECT `score`, COUNT(*) AS `number`
-FROM `second_table`
-GROUP BY `score`
-ORDER BY `number` DESC;
-=======
--- A script that lists the number of records with the same score in the table second_table of the database hbtn_0c_0 in your MySQL server.
--- The result should display:
--- the score
--- the number of records for this score with the label number
+-- lists the number of records with the same score from second_table
+-- results should display the score, number of records
 -- The list should be sorted by the number of records (descending)
--- The database name will be passed as an argument to the mysql command
 
--- QUERYING
-SELECT score, COUNT(*) AS number
-FROM second_table
-GROUP BY score
-ORDER BY number DESC;
->>>>>>> 074d076ed81eb1145fab1c68cd583ac96c63d776
+SELECT score, COUNT(*)
+as number FROM second_table
+GROUP BY score ORDER BY number DESC;

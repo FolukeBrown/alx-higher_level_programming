@@ -1,8 +1,13 @@
 #!/usr/bin/node
-if (process.argv.length <= 3) {
+
+const process = require('process');
+const args = process.argv;
+
+if (isNaN(args[2]) || isNaN(args[3])) {
   console.log('0');
 } else {
-  const arr = process.argv.slice(2).map(Number);
-  const second = arr.sort(function (a, b) { return b - a; })[1];
-  console.log(second);
+  const array = args.map(Number);
+  array.slice(2, args.length);
+  array.sort((a, b) => a - b);
+  console.log(array[array.length - 2]);
 }

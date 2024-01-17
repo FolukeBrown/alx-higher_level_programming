@@ -1,92 +1,106 @@
-# Python - Hello, World
+## 0x00. Python - Hello, World
 
-In this project, I began practicing using the interpreter, printing text
-and variables, and indexing and slicing strings in Python.
+## 0. Run Python file
+     * A Shell script that runs a Python script. 
+     * The Python file will be saved in the environment variable $PYFILE
 
-## Function Prototypes :floppy_disk:
+## 1. Run inline
+     * A shell script that runs Python code
+     * The Python code will be saved in the environment variable $PYCODE
 
-Prototypes for functions written in this project:
+## 2. Hello, print
+     * A python script that prints exactly ”Programming is like building a multilingual puzzle
+     * followed by a new line
+     * use the function print
 
-| File                       | Prototype                             |
-| -------------------------- | ------------------------------------- |
-| `10-check_cycle.c`         | `int check_cycle(listint_t *list);`   |
-| `102-magic_calculation.py` | `def magic_calculation(a, b):`        |
+## 3. Print interger
+      * Complete the given source code in order to print the interger stored in the variable number
+      * followed by Battery street followed by a new line
+      * output of the program should be:
+          * the number, followed by Battery street followed by a newline
+      * you are not allowed to cast the variable number into a string
+      * code must be 3 lines long
+      * you have to use f-strings
 
-## Tasks :page_with_curl:
+## 4. Print float
+      * Complete the given source code in order to print the float stored in the variable number
+      * with a precison of 2 digits
+      * output of the program should be:
+          * Float:,  followed by  the float with only 2 digits, followed by a new line
+      * you are not allowed to cast the variable number into a string
+      * you have to use f-strings
 
-* **0. Run Python File**
-  * [0-run](./0-run): Bash script that runs a Python script file saved
-  in the environment variable `$PYFILE`.
+## 5. Print string
+      * Complete the given source code in order to print  3 times a string stored in the variable str
+      * followed by its first 9 characters
+      * output of the program should be:
+           * 3 times the value of str
+           * followed by a new line
+           * followed by the first 9 characters of str
+           * followed by a new line
+      * you are not allowed to use any loops or conditional statements
+      * your program should be maximum 5 lines long
 
-* **1. Run inline**
-  * [1-run_inline](./1-run_inline): Bash script that runs Python code saved in the
-  environment variable `$PYCODE`.
+## 6. Play with strings
+     * Complete the given source code in order to print  Welcome to Holberton School!  
+     * you are not allowed to use any loops or conditional statements
+     * You have to use the variables str1 and str2 in your new line of code
+     * your program should be exactly 5 lines long
 
-* **2. Hello, print**
-  * [2-print.py](./2-print.py): Python script that prints exactly `"Programming is
-  like building a multilingual puzzle`, followed by a new line using the function `print`.
+## 7. Copy-Cut-Paste
+     * Complete the given source code 
+     *Your program should be exactly 8 lines long
+     * word_first_3 should contain the first 3 letters of the variable word
+     * word_last_2 should contain the last 2 letters of the variable word
+     * middle_word should contain the value of the variable word without the first and last letters
 
-* **3. Print integer**
-  * [3-print_number.py](./3-print_number.py): Python script that prints the integer stored
-  in the variable `number`, followed by `Battery street`, followed by a new line.
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py).
+## 8. Create a new sentence
+     * Complete the given source code in order to print object-oriented programming with Python, followed by a new line.
+     * You are not allowed to use any loops or conditional statements
+     * Your program should be exactly 5 lines long
+     * You are not allowed to create new variables
+     * You are not allowed to use string literals
 
-* **4. Print float**
-  * [4-print_float.py](./4-print_float.py): Python script that prints the float stored
-  in the variable `number` with a precision of two digits.
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/4-print_float.py).
+## 9. Easter Egg
+    *A Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
+    *Your script should be maximum 98 characters long  
 
-* **5. Print string**
-  * [5-print_string.py](./5-print_string.py): Python script that prints a string stored
-  in the variable `str` three times, then a new line, then the first nine characters
-  contained in `str`, followed by another new line.
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py).
+## 10. Linked list cycle
+     * A function in C that checks if a singly linked list has a cycle in it
+     * Requirements: 
+     * Only these functions are allowed: write, printf, putchar, puts, malloc, free
+> The code;
+     * The function check_cycle takes a pointer to the head of a linked list (listint_t *list) as its input parameter 
+     * and returns an integer value of either 1 or 0.
+     * The function uses the "slow and fast pointers" approach to detect cycles in the linked list.
+     * It initializes two pointers, slow and fast, both pointing to the head of the list.
+     * The function then enters a loop that continues as long as slow, fast, and fast->next (the next node after fast) are all non-null. 
+     * In each iteration, slow moves one node forward (slow = slow->next), and fast moves two nodes forward (fast = fast->next->next).
+     * If at any point slow and fast become equal (slow == fast), it means that the pointers have met, indicating the presence of a cycle 
+     * in the linked list. In this case, the function returns 1 to indicate the existence of a cycle.
+     * If the loop completes without detecting a cycle, it means that the end of the linked list has been reached, and there are no cycles. 
+     * In this case, the function returns 0 to indicate the absence of a cycle.
+     * Overall, the check_cycle function uses the "slow and fast pointers" technique to efficiently determine if a linked list contains a cycle. 
+     * It achieves this by moving two pointers through the list at different speeds and checking if they eventually meet.
 
-* **6. Play with strings**
-  * [6-concat.py](./6-concat.py): Python script that prints `Welcome to Holberton
-  School!` using the variables `str1 = "Holberton"` and `str2 = "School"`.
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py).
+## 100. Hello, write
+     * a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.
+     * Use the function write from the sys module
+     * You are not allowed to use print
+     * Your script should print to stderr
+     * Your script should exit with the status code 1
 
-* **7. Copy - Cut - Paste**
-  * [7-edges.py](./7-edges.py): Python script that sets three string variables based
-  on the string contained in the variable `word` as follows:
-  * `word_first_3`: Contains the first three letters of the variable `word`.
-  * `word_last_2`: Contains the last two letters of the variable `word`.
-  * `middle_word`: Contains the value of the variable `word` without the first and last letters.
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py).
+## 101. Compile
+     * A script that compiles a Python script file.
+     * The Python file name will be stored in the environment variable $PYFILE
+     * The output filename has to be $PYFILEc (ex: export PYFILE=my_main.py => output filename: my_main.pyc)
 
-* **8. Create a new sentence**
-  * [8-concat_edges.py](./8-concat_edges.py): Python script that prints `object-oriented
-  programming with Python`, followed by a new line without creating new variables or
-  string literals.
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py).
+## 102. ByteCode-> Python #1
+     * Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
+		 3           0 LOAD_CONST               1 (98)
+              3 LOAD_FAST                0 (a)
+              6 LOAD_FAST                1 (b)
+              9 BINARY_POWER
+             10 BINARY_ADD
+             11 RETURN_VALUE
 
-* **9. Easter Egg**
-  * [9-easter_egg.py](./9-easter_egg.py): Python script that prints "The Zen of Python" by
-  Tim Peters, followed by a new line.
-
-* **10. Linked list cycle**
-  * [10-check_cycle.c](./10-check_cycle.c): C function that checks if a linked list
-  contains a cycle.
-  * Returns `0` if there is no cycle and `1` if there is.
-  * Helper files:
-    * [linked_lists.c](./linked_lists.c): C functions handling linked lists for testing
-    [10-check_cycle.c](./10-check_cycle.c) (provided by Holberton School).
-    * [lists.h](./lists.h): Header file containing definitions and prototypes for
-    all types and functions used in [linked_lists.c](./linked_lists.c) and
-    [10-check_cycle.c](./10-check_cycle.c).
-
-* **11. Hello, write**
-  * [100-write.py](./100-write.py): Python script that prints exactly `and that piece of
-  art is useful - Dora Korpar, 2015-10-19`, followed by a new line to `stderr` using
-  the function `write` from the `sys` module.
-  * Exits with a status code of `1`.
-
-* **12. Compile**
-  * [101-compile](./101-compile): Python script that compiles a Python script file stored
-  in the environment variable `$PYFILE` and saves it to an output file
-  `$PYFILEc` (ex. `export PYFILE=my_main.py` => output filename: `my_main.pyc`).
-
-* **13. ByteCode -> Python #1**
-  * [102-magic_calculation.py](./102-magic_calculation.py): Python function matching exactly
-  a bytecode provided by Holberton School.
